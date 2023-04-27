@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lotto_flutter/util/circle.dart';
+import 'package:flutter/rendering.dart';
+import 'package:lotto_flutter/home/win_number.dart';
+import 'package:lotto_flutter/home/win_number_info.dart';
 
 void main() {
+  debugPaintSizeEnabled = true;
   runApp(const MyApp());
 }
 
@@ -15,47 +18,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: Scaffold(
         appBar: AppBar(),
-        body: Row(
-          children: [
-            Column(
-              children: const [Text('hello'), Text('goodbye')],
-            ),
-            CustomCircleAvatar(
-              ballNumber: 1,
-              radius: 50,
-              fontSize: 50,
-            ),
-            CustomCircleAvatar(
-              ballNumber: 11,
-              radius: 50,
-              fontSize: 50,
-            ),
-            CustomCircleAvatar(
-              ballNumber: 21,
-              radius: 50,
-              fontSize: 50,
-            ),
-            CustomCircleAvatar(
-              ballNumber: 31,
-              radius: 50,
-              fontSize: 50,
-            ),
-            CustomCircleAvatar(
-              ballNumber: 41,
-              radius: 50,
-              fontSize: 50,
-            ),
-            CustomCircleAvatar(
-              ballNumber: 45,
-              radius: 50,
-              fontSize: 50,
-            ),
-            CustomCircleAvatar(
-              ballNumber: 25,
-              radius: 40,
-              fontSize: 50,
-            ),
-          ],
+        body: SizedBox(
+          child: Column(children: [
+            Expanded(flex: 4, child: WinNumber()),
+            Expanded(flex: 6, child: WinNumberInfo())
+          ],)
         ),
       ),
     );
