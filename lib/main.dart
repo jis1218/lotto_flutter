@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(),
         body: SizedBox(
-          child: Column(children: [
+          child: Column(children: const [
             Expanded(flex: 4, child: WinNumber()),
             Expanded(flex: 6, child: WinNumberInfo())
           ],)
