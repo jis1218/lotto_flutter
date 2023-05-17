@@ -34,7 +34,6 @@ class WinNumber extends StatelessWidget {
                   ],
                 )
               )
-
             ),
           ],
         ),
