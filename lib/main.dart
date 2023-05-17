@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:lotto_flutter/home/win_number.dart';
-import 'package:lotto_flutter/home/win_number_info.dart';
+import 'package:lotto_flutter/home/win_number_button.dart';
 
 void main() {
   debugPaintSizeEnabled = true;
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         body: SizedBox(
           child: Column(children: const [
             Expanded(flex: 4, child: WinNumber()),
-            Expanded(flex: 6, child: WinNumberInfo())
+            Expanded(flex: 6, child: WinNumberButton())
           ],)
         ),
       ),
