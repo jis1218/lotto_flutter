@@ -11,13 +11,6 @@ class WinNumberButton extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text('당첨자 5명'),
-                Text('당첨금액 4000원')
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(onPressed: (){}, child: const Text('QR 당첨확인')),
                 OutlinedButton(onPressed: (){
