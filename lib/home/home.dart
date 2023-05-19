@@ -1,32 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:lotto_flutter/home/win_number.dart';
+import 'package:lotto_flutter/home/win_number_button.dart';
+import 'package:lotto_flutter/home/win_number_info.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
-          primarySwatch: Colors.blue,
+    return DefaultTabController(
+      initialIndex: 0,
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          bottom: const TabBar(tabs: <Widget>[
+            Tab(icon: Icon(Icons.flag)),
+            Tab(icon: Icon(Icons.abc_sharp)),
+            Tab(icon: Icon(Icons.dashboard)),
+          ]),
         ),
-        home: Scaffold(
-          appBar: AppBar(),
-          body: const CircleAvatar(
-            radius: 50,
-            backgroundColor: Colors.amberAccent,
-            child: Text('1'),
-          ),
-        ));
+        body: TabBarView(
+          children: [
+            SizedBox(
+              child: Column(
+                children: const [
+                  Expanded(flex: 3, child: WinNumber()),
+                  Expanded(flex: 1, child: WinNumberInfo()),
+                  Expanded(flex: 6, child: WinNumberButton())
+                ],
+              ),
+            ),
+            const Center(
+              child: Text('Hello'),
+            ),
+            const Center(
+              child: Text('Goodbye'),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
