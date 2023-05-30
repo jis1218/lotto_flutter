@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lotto_flutter/home/win_number.dart';
 import 'package:lotto_flutter/home/win_number_button.dart';
 import 'package:lotto_flutter/home/win_number_info.dart';
+import 'package:lotto_flutter/statistics/statistics.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -34,8 +35,12 @@ class Home extends StatelessWidget {
             const Center(
               child: Text('Hello'),
             ),
-            const Center(
-              child: Text('Goodbye'),
+            SizedBox(
+              child: Column(
+                children: const [
+                  Expanded(flex: 10, child: Statistics())
+                ],
+              )
             )
           ],
         ),
