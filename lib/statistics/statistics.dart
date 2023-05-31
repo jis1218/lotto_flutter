@@ -29,11 +29,6 @@ class _Statistics extends State<Statistics> {
             itemBuilder: (BuildContext context, int index) {
               return ListTile(
                 title: Text(_statisticsMenu[index].menuName),
-                trailing: GestureDetector(
-                  onTap: () {
-                    
-                  },
-                ),
               );
             },
           ),
