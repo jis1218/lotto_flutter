@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lotto_flutter/home/win_number.dart';
 import 'package:lotto_flutter/home/win_number_button.dart';
 import 'package:lotto_flutter/home/win_number_info.dart';
-import 'package:lotto_flutter/statistics/statistics.dart';
+import 'package:lotto_flutter/statistics/view/statistics.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

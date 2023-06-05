@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
 
-import 'odd_even_data.dart';
+import '../odd_even_data.dart';
 
 
 class OddEven extends StatefulWidget {
